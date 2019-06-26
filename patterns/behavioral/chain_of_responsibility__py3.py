@@ -19,6 +19,17 @@ in several directions, forming a `tree of responsibility`.
 
 *TL;DR
 Allow a request to pass down a chain of receivers until it is handled.
+
+这个模式是关于什么的？
+
+责任链是一个面向对象版本的`if ... elif ... elif ... else ...`,
+这样做的好处是，可以在运行时动态地重新排列和配置条件操作块。
+
+此模式的目的是通过允许请求通过链接的接收器移动，直到处理请求，
+从而将请求的发送方与其接收方解耦。
+
+*TL;DR
+允许一个请求向下传递一个接收器链，直到它被处理。
 """
 
 import abc
