@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
+责任链
 *What is this pattern about?
 
 The Chain of responsibility is an object oriented version of the
@@ -47,6 +48,11 @@ class Handler(metaclass=abc.ABCMeta):
 
         As an alternative you might even in case of success
         call the next handler.
+        处理请求并停止。
+        如果不能-调用链中的下一个处理程序。
+
+        作为一个选择，你甚至可能在成功的情况下
+        调用下一个处理程序。
         """
         res = self.check_range(request)
         if not res and self.successor:
@@ -54,12 +60,15 @@ class Handler(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
     def check_range(self, request):
-        """Compare passed value to predefined interval"""
+        """Compare passed value to predefined interval
+            将传递的值与预定义的范围进行比较
+        """
 
 
 class ConcreteHandler0(Handler):
     """Each handler can be different.
     Be simple and static...
+    每一个处理程序可以使不同的，简单的静态的
     """
 
     @staticmethod
@@ -70,7 +79,9 @@ class ConcreteHandler0(Handler):
 
 
 class ConcreteHandler1(Handler):
-    """... With it's own internal state"""
+    """... With it's own internal state
+        它有自己的内部状态
+    """
 
     start, end = 10, 20
 
@@ -81,7 +92,9 @@ class ConcreteHandler1(Handler):
 
 
 class ConcreteHandler2(Handler):
-    """... With helper methods."""
+    """... With helper methods.
+        有辅助方法。
+    """
 
     def check_range(self, request):
         start, end = self.get_interval_from_db()

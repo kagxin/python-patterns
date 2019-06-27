@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
+备忘录模式
 http://code.activestate.com/recipes/413838-memento-closure/
 
-*TL;DR
+*TL;DR 
 Provides the ability to restore an object to its previous state.
+提供将对象恢复到其以前状态的能力。
 """
 
 from copy import copy

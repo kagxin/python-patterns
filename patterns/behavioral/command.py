@@ -4,8 +4,8 @@
 """
 *TL;DR
 Encapsulates all information needed to perform an action or trigger an event.
-
-*Examples in Python ecosystem:
+    封装执行操作或触发事件所需的所有信息。
+*Examples in Python ecosystem: python生态中的例子
 Django HttpRequest (without `execute` method):
  https://docs.djangoproject.com/en/2.1/ref/request-response/#httprequest-objects
 """
@@ -39,21 +39,21 @@ def main():
     ...     MoveFileCommand('bar.txt', 'baz.txt')
     ... ]
 
-    # Verify that none of the target files exist
+    # Verify that none of the target files exist 检验没有目标文件存在
     >>> assert not lexists("foo.txt")
     >>> assert not lexists("bar.txt")
     >>> assert not lexists("baz.txt")
 
-    # Create empty file
+    # Create empty file 创建空文件
     >>> open("foo.txt", "w").close()
 
-    # Commands can be executed later on
+    # Commands can be executed later on 命令可以稍后执行
     >>> for cmd in command_stack:
     ...     cmd.execute()
     renaming foo.txt to bar.txt
     renaming bar.txt to baz.txt
 
-    # And can also be undone at will
+    # And can also be undone at will 也可以随意撤销
     >>> for cmd in reversed(command_stack):
     ...     cmd.undo()
     renaming baz.txt to bar.txt

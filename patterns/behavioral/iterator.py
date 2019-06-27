@@ -4,16 +4,20 @@
 """
 http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
 Implementation of the iterator pattern with a generator
+用生成器实现迭代器模式
 
 *TL;DR
 Traverses a container and accesses the container's elements.
+遍历容器并访问容器的元素。
 """
 
 from __future__ import print_function
 
 
 def count_to(count):
-    """Counts by word numbers, up to a maximum of five"""
+    """Counts by word numbers, up to a maximum of five
+        按单词数计数，最多5个
+    """
     numbers = ["one", "two", "three", "four", "five"]
     for number in numbers[:count]:
         yield number

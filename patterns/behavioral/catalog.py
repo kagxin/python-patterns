@@ -2,8 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
+目录？
 A class that uses different static function depending of a parameter passed in
 init. Note the use of a single dictionary instead of multiple conditions
+
+一个类更具传入的参数使用不同的静态函数。
+注意使用单个字典而不是多个条件语句
 """
 
 __author__ = "Ibrahim Diop <ibrahim@sikilabs.com>"
@@ -11,7 +15,7 @@ __author__ = "Ibrahim Diop <ibrahim@sikilabs.com>"
 
 class Catalog(object):
     """catalog of multiple static methods that are executed depending on an init
-
+        根据初始化函数执行的多个静态方法的catalog
     parameter
     """
 
@@ -20,9 +24,12 @@ class Catalog(object):
         # dictionary that will be used to determine which static method is
         # to be executed but that will be also used to store possible param
         # value
+        """
+            字典_static_method_choices，用于确定要执行哪个静态方法，也将用于存储可能的参数值
+        """
         self._static_method_choices = {'param_value_1': self._static_method_1, 'param_value_2': self._static_method_2}
 
-        # simple test to validate param value
+        # simple test to validate param value 对参数的有效性进行简单测试
         if param in self._static_method_choices.keys():
             self.param = param
         else:
@@ -40,15 +47,16 @@ class Catalog(object):
         """will execute either _static_method_1 or _static_method_2
 
         depending on self.param value
+            - 更具self.param 的值，将会执行_static_method_1或者_static_method_2
         """
         self._static_method_choices[self.param]()
 
 
-# Alternative implementation for different levels of methods
+# Alternative implementation for different levels of methods 不同级别方法的另外一种实现
 class CatalogInstance(object):
 
     """catalog of multiple methods that are executed depending on an init
-
+        根据初始化函数执行的多个静态方法的catalog
     parameter
     """
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+方法链
+"""
 
 from __future__ import print_function
 
