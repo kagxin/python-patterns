@@ -28,6 +28,7 @@ class Transaction(object):
     """A transaction guard.
 
     This is, in fact, just syntactic sugar around a memento closure.
+    一个事务，事实上，这只是一个围绕memento 闭包的一个语法糖
     """
 
     deep = False
@@ -50,6 +51,8 @@ class Transactional(object):
     """Adds transactional semantics to methods. Methods decorated  with
 
     @Transactional will rollback to entry-state upon exceptions.
+    向方法添加事务语义。 使用 @Transactional 对方法进行装饰，将在发生异常的时候
+    回滚到入口状态。
     """
 
     def __init__(self, method):
@@ -79,8 +82,8 @@ class NumObj(object):
 
     @Transactional
     def do_stuff(self):
-        self.value = '1111'  # <- invalid value
-        self.increment()  # <- will fail and rollback
+        self.value = '1111'  # <- invalid value 无效值
+        self.increment()  # <- will fail and rollback  将会失败并回滚
 
 
 def main():
