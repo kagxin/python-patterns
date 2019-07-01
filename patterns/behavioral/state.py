@@ -9,6 +9,10 @@ http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
 *TL;DR
 Implements state as a derived class of the state pattern interface.
 Implements state transitions by invoking methods from the pattern's superclass.
+
+将state实现为状态模式接口的派生类。
+
+通过调用模式超类中的方法来实现状态转换。
 """
 
 from __future__ import print_function
@@ -16,10 +20,14 @@ from __future__ import print_function
 
 class State(object):
 
-    """Base state. This is to share functionality"""
+    """Base state. This is to share functionality
+        状态基类， 这是共有（共享）的功能
+    """
 
     def scan(self):
-        """Scan the dial to the next station"""
+        """Scan the dial to the next station
+            扫描stations list到下一电台
+        """
         self.pos += 1
         if self.pos == len(self.stations):
             self.pos = 0
@@ -52,7 +60,9 @@ class FmState(State):
 
 class Radio(object):
 
-    """A radio.     It has a scan button, and an AM/FM toggle switch."""
+    """A radio.     It has a scan button, and an AM/FM toggle switch.
+        一台收音机， 它有一个扫描按钮和一个AM/FM切换按键
+    """
 
     def __init__(self):
         """We have an AM state and an FM state"""

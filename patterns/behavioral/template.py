@@ -3,12 +3,14 @@
 
 """
 An example of the Template pattern in Python
+python中一个模板模式的例子
 
 *TL;DR
 Defines the skeleton of a base algorithm, deferring definition of exact
 steps to subclasses.
+定义基本算法的框架，让子类实现精确步骤的定义。
 
-*Examples in Python ecosystem:
+*Examples in Python ecosystem: python生态中的例子
 Django class based views: https://docs.djangoproject.com/en/2.1/topics/class-based-views/
 """
 

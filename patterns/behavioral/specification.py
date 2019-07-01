@@ -6,6 +6,11 @@
 
 *TL;DR
 Provides recombination business logic by chaining together using boolean logic.
+重新组合业务逻辑，通过boolean值链接在一起
+specification:规范
+candidate:候选人
+satisfy:满意
+composite:混合
 """
 
 from abc import abstractmethod

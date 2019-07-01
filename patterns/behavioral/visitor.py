@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
+访问者模式
 http://peter-hoffmann.com/2010/extrinsic-visitor-pattern-python-inheritance.html
 
 *TL;DR
 Separates an algorithm from an object structure on which it operates.
+将算法从其操作的对象结构中分离出来。
 
 An interesting recipe could be found in
 Brian Jones, David Beazley "Python Cookbook" (2013):

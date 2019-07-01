@@ -25,6 +25,8 @@ class BaseRegisteredClass(metaclass=RegistryHolder):
     Any class that will inherits from BaseRegisteredClass will be included
     inside the dict RegistryHolder.REGISTRY, the key being the name of the
     class and the associated value, the class itself.
+    任何继承BaseRegisteredClass的类将会被包含在字典RegistryHolder.REGISTRY里，它
+    的key是类的名称，关联的值是类本身
     """
 
 

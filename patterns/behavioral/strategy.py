@@ -2,12 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
+策略模式
 *What is this pattern about?
 Define a family of algorithms, encapsulate each one, and make them interchangeable.
 Strategy lets the algorithm vary independently from clients that use it.
+定义一组算法，封装每个算法，并使它们可互换。
+策略模式允许算法独立于使用它的客户端。
 
 *TL;DR
 Enables selecting an algorithm at runtime.
+允许在运行时选择算法。
 """
 
 
