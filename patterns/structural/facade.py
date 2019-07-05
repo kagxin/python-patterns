@@ -16,11 +16,21 @@ fact there are many procedures and operations done when that happens
 serves as an unified interface to all the underlying procedures to
 turn on a computer.
 
+Facade模式是一种为更复杂的系统提供更简单的统一接口的方法。
+通过提供一个入口点，它提供了访问底层系统功能的更简单的方法。
+这种抽象出现在许多实际的情况中。
+例如，我们只需按下一个按钮就可以打开一台计算机，
+但实际上，当这种情况发生时，有许多过程和操作要做(例如，将程序从磁盘加载到内存)。
+在本例中，该按钮作为所有打开计算机的底层过程的统一接口。
+
 *Where is the pattern used practically?
 This pattern can be seen in the Python standard library when we use
 the isdir function. Although a user simply uses this function to know
 whether a path refers to a directory, the system makes a few
 operations and calls other modules (e.g., os.stat) to give the result.
+
+当我们使用isdir函数时，可以在Python标准库中看到这种模式。
+虽然用户只是使用这个函数来知道路径是否引用目录，但是系统会执行一些操作并调用其他模块(例如os.stat)来给出结果。
 
 *References:
 https://sourcemaking.com/design_patterns/facade
@@ -29,6 +39,7 @@ http://python-3-patterns-idioms-test.readthedocs.io/en/latest/ChangeInterface.ht
 
 *TL;DR
 Provides a simpler unified interface to a complex system.
+为复杂系统提供更简单的统一接口。
 """
 
 from __future__ import print_function

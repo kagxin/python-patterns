@@ -7,6 +7,7 @@ Author: https://github.com/IuryAlves
 
 *TL;DR
 Allows object composition to achieve the same code reuse as inheritance.
+允许对象组合实现与继承相同的代码重用。
 """
 
 

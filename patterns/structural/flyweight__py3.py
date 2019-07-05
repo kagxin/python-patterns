@@ -11,11 +11,21 @@ The state of a Flyweight should not be affected by it's context, this
 is known as its intrinsic state. The decoupling of the objects state
 from the object's context, allows the Flyweight to be shared.
 
+这种模式的目的是最小化程序在运行时所需的对象数量。
+Flyweight是由多个上下文共享的对象，与不共享的对象没有什么区别。
+
+Flyweight的状态不应该受到它的上下文的影响，这就是它的固有状态。
+对象状态与对象上下文的解耦允许共享Flyweight。
+
 *What does this example do?
 The example below sets-up an 'object pool' which stores initialised
 objects. When a 'Card' is created it first checks to see if it already
 exists instead of creating a new one. This aims to reduce the number of
 objects initialised by the program.
+
+下面的例子设置了一个“对象池”，它存储初始化的对象。
+当一个“卡片”被创建时，它首先检查它是否已经存在，而不是创建一个新的。
+这旨在减少程序初始化的对象数量。
 
 *References:
 http://codesnipers.com/?q=python-flyweights
@@ -26,6 +36,7 @@ https://docs.python.org/3/library/sys.html#sys.intern
 
 *TL;DR
 Minimizes memory usage by sharing data with other similar objects.
+通过与其他类似对象共享数据，最小化内存使用。
 """
 
 import weakref

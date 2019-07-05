@@ -15,9 +15,15 @@ italic) to a text by appending the corresponding tags (<b> and
 since the original text is passed to the bold wrapper, which in turn
 is passed to the italic wrapper.
 
+装饰器模式用于在不更改对象实现的情况下动态地向对象添加新特性。
+它与继承不同，因为新特性只添加到特定对象，而不是添加到整个子类。
+
 *Where is the pattern used practically?
 The Grok framework uses decorators to add functionalities to methods,
 like permissions or subscription to an event:
+http://grok.zope.org/doc/current/reference/decorators.html
+
+Grok框架使用装饰器向方法添加功能，比如权限或事件订阅:
 http://grok.zope.org/doc/current/reference/decorators.html
 
 *References:
@@ -25,6 +31,8 @@ https://sourcemaking.com/design_patterns/decorator
 
 *TL;DR
 Adds behaviour to object without affecting its class.
+将行为添加到对象而不影响其类。
+
 """
 
 from __future__ import print_function

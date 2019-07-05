@@ -31,6 +31,24 @@ http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
 
 *TL;DR
 Provides a way to encapsulate a group of individual factories.
+
+在Java和其他语言中，抽象工厂模式提供了一个接口，用于创建相关/依赖对象，而不需要指定它们的实际类。
+
+其思想是根据业务逻辑、平台选择等抽象对象的创建。
+
+在Python中，我们使用的接口只是一个可调用的接口，也就是Python中的 "builtin" 接口，在正常情况下，我们可以简单地使用类本身作为可调用的接口，
+    因为类是Python中的first class。
+
+这个例子是做什么的?
+
+这个特殊的实现抽象了宠物的创建，并根据我们选择的工厂(Dog或Cat，或random_animal)来实现。
+现在，我的应用程序可以抽象地创建宠物，然后根据我自己的标准来决定是狗还是猫。
+
+句型实际上用在什么地方?
+
+
+*TL;DR
+提供封装一组单独工厂的方法。
 """
 
 import random

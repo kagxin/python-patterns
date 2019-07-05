@@ -14,6 +14,13 @@ Port of the Java example of Dependency Injection" in
 In the following example `time_provider` (service) is embedded into TimeDisplay (client).
 If such service performed an expensive operation you would like to substitute or mock it in tests.
 
+依赖项注入(Dependency Injection, DI)是一种技术，一个对象向另一个对象(客户机)提供依赖项(服务)。
+它允许解耦对象:不需要更改客户机代码，因为它所依赖的对象需要更改为不同的对象。(开/闭原则)
+
+Java依赖注入示例的端口“在”xUnit测试模式中“重构测试代码”(ISBN-10: 0131495054, ISBN-13: 978-0131495050)
+
+在下面的示例中，将“time_provider”(服务)嵌入到TimeDisplay(客户机)中。如果此类服务执行了昂贵的操作，您希望在测试中替换或模拟它。
+
 class TimeDisplay(object):
 
     def __init__(self):

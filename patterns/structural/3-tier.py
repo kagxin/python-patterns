@@ -4,6 +4,7 @@
 """
 *TL;DR
 Separates presentation, application processing, and data management functions.
+分离表示、应用程序处理和数据管理功能。
 """
 
 

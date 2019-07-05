@@ -11,6 +11,10 @@ This is useful as it make it easier to derive new kinds of objects,
 when instances of the class have only a few different combinations of
 state, and when instantiation is expensive.
 
+这种模式旨在减少应用程序所需的类的数量。
+它不是依赖子类，而是通过在运行时复制一个原型实例来创建对象。
+这很有用，因为当类的实例只有几个不同的状态组合时，当实例化很昂贵时，派生新类型的对象更容易。
+
 *What does this example do?
 When the number of prototypes in an application can vary, it can be
 useful to keep a Dispatcher (aka, Registry or Manager). This allows
@@ -20,8 +24,14 @@ instance.
 Below provides an example of such Dispatcher, which contains three
 copies of the prototype: 'default', 'objecta' and 'objectb'.
 
+当应用程序中的原型数量可能变化时，保留一个Dispatcher (aka、Registry或Manager)可能很有用。
+这允许客户端在克隆新实例之前查询原型的Dispatcher。
+
+下面提供了一个这样的Dispatcher示例，它包含原型的三个副本:“default”、“objecta”和“objectb”。
+
 *TL;DR
 Creates new object instances by cloning prototype.
+通过克隆原型创建新的对象实例。
 """
 
 

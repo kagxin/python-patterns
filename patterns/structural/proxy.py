@@ -4,6 +4,7 @@
 """
 *TL;DR
 Provides an interface to resource that is expensive to duplicate.
+提供到资源的接口，该接口的复制成本很高。
 """
 
 from __future__ import print_function

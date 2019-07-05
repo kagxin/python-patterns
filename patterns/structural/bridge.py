@@ -7,6 +7,7 @@ http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Bridge_Pattern#Pyt
 
 *TL;DR
 Decouples an abstraction from its implementation.
+将抽象与其实现解耦。
 """
 
 

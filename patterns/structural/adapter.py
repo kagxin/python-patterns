@@ -9,6 +9,10 @@ somewhere that has outlets in a different shape. Following this idea,
 the Adapter pattern is useful to integrate classes that couldn't be
 integrated due to their incompatible interfaces.
 
+适配器模式为类提供了不同的接口。
+我们可以把它想象成一个电缆适配器，它可以让你给一个有不同形状插座的手机充电。
+按照这个想法，适配器模式对于集成由于接口不兼容而无法集成的类非常有用。
+
 *What does this example do?
 
 The example has classes that represent entities (Dog, Cat, Human, Car)
@@ -17,9 +21,16 @@ interface to the original methods that make such noises. So the
 original interfaces (e.g., bark and meow) are available under a
 different name: make_noise.
 
+这个例子有一些类，它们表示发出不同声音的实体(狗、猫、人、车)。
+适配器类提供了与产生这种噪声的原始方法不同的接口。
+因此，原始接口(例如bark和meow)可以在另一个名称下使用:make_noise。
+
 *Where is the pattern used practically?
 The Grok framework uses adapters to make objects work with a
 particular API without modifying the objects themselves:
+http://grok.zope.org/doc/current/grok_overview.html#adapters
+
+Grok框架使用适配器使对象在不修改对象本身的情况下与特定的API一起工作:
 http://grok.zope.org/doc/current/grok_overview.html#adapters
 
 *References:
@@ -29,6 +40,7 @@ http://python-3-patterns-idioms-test.readthedocs.io/en/latest/ChangeInterface.ht
 
 *TL;DR
 Allows the interface of an existing class to be used as another interface.
+允许将现有类的接口用作另一个接口。
 """
 
 

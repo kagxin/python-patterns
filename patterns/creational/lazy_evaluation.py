@@ -3,7 +3,7 @@
 
 """
 Lazily-evaluated property pattern in Python.
-
+Python中延迟计算的属性模式。
 https://en.wikipedia.org/wiki/Lazy_evaluation
 
 *References:
@@ -20,6 +20,7 @@ https://github.com/pallets/werkzeug/blob/5a2bf35441006d832ab1ed5a31963cbc366c99a
 
 *TL;DR
 Delays the eval of an expr until its value is needed and avoids repeated evals.
+延迟表达的求值，直到需要它的值，并避免重复的执行。
 """
 
 from __future__ import print_function

@@ -5,7 +5,9 @@
 @author: Gordeev Andrey <gordeev.and.and@gmail.com>
 
 *TL;DR
+表示层设计模式
 Provides a centralized entry point that controls and manages request handling.
+提供控制和管理请求处理的集中入口点。
 """
 
 

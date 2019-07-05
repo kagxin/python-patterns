@@ -9,6 +9,9 @@ family.
 This is useful when you must separate the specification of an object
 from its actual representation (generally for abstraction).
 
+它解耦了复杂对象的创建及其表示，因此可以重用相同的流程来构建来自相同家族的对象。
+当您必须将对象的规范与其实际表示(通常用于抽象)分离时，这是非常有用的。
+
 *What does this example do?
 
 The first example achieves this by using an abstract base
@@ -25,6 +28,13 @@ instance of a different class.
 In general, in Python this won't be necessary, but a second example showing
 this kind of arrangement is also included.
 
+第一个示例通过使用一个抽象基类来实现这一点，其中初始化器(__init__方法)指定了所需的步骤，具体的子类实现了这些步骤。
+在其他编程语言中，有时需要更复杂的安排。特别是，您不能在c++的构造函数中有多态行为——请参见
+https://stackoverflow.com/questions/1453131/how-can-i-get-polymorphic-behavior-in-a-c-constructor
+-这意味着这种Python技术将不起作用。所需的多态性必须由一个外部的、已构造的不同类的实例提供。
+
+一般来说，在Python中，这不是必需的，但是还包含了展示这种安排的第二个示例。
+
 *Where is the pattern used practically?
 
 *References:
@@ -32,6 +42,7 @@ https://sourcemaking.com/design_patterns/builder
 
 *TL;DR
 Decouples the creation of a complex object and its representation.
+解耦复杂对象的创建及其表示。
 """
 
 
@@ -72,6 +83,10 @@ class Flat(Building):
 # logic into another function (or a method on another class), rather than being
 # in the base class '__init__'. (This leaves you in the strange situation where
 # a concrete class does not have a useful constructor)
+'''
+在一些非常复杂的情况下，将构建逻辑提取到另一个函数(或另一个类上的方法)中，而不是放在基类“_init__”中，可能是可取的。
+(这会让您陷入一种奇怪的情况，具体类没有一个有用的构造函数)
+'''
 
 
 class ComplexBuilding(object):

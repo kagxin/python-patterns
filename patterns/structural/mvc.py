@@ -4,6 +4,7 @@
 """
 *TL;DR
 Separates data in GUIs from the ways it is presented, and accepted.
+将gui中的数据从显示和接受数据的方式中分离出来。
 """
 
 

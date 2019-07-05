@@ -11,6 +11,12 @@ available in the pool.
 A pool allows to 'check out' an inactive object and then to return it.
 If none are available the pool creates one to provide without wait.
 
+当创建一个对象很昂贵(而且经常创建)，但一次只使用几个对象时，就会使用这种模式。
+使用池，我们可以通过缓存这些实例来管理我们目前拥有的实例。
+现在，如果池中有对象可用，就可以跳过昂贵的对象创建。
+池允许“检出”不活动的对象，然后返回它。
+如果没有可用的线程池，则创建一个线程池来提供，而不需要等待。
+
 *What does this example do?
 In this example queue.Queue is used to create the pool (wrapped in a
 custom ObjectPool object to use with the with statement), and it is
@@ -21,6 +27,10 @@ afterwards it is reused by the explicit call to sample_queue.get().
 Same thing happens with "sam", when the ObjectPool created insided the
 function is deleted (by the GC) and the object is returned.
 
+在这个示例队列中。Queue用于创建池(包装在与with语句一起使用的自定义ObjectPool对象中)，并用字符串填充它。
+正如我们所看到的，放在“yam”中的第一个字符串对象由with语句使用。但是因为它在之后被释放回池中，所以会被显式调用sample_queue.get()重用。
+同样的事情也发生在“sam”上，当内部创建的ObjectPool函数被删除(由GC创建)并返回对象时。
+
 *Where is the pattern used practically?
 
 *References:
@@ -29,6 +39,7 @@ https://sourcemaking.com/design_patterns/object_pool
 
 *TL;DR
 Stores a set of initialized objects kept ready to use.
+存储一组初始化的对象，以备使用。
 """
 
 
